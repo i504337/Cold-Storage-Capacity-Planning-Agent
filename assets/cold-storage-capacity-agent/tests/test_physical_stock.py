@@ -54,8 +54,8 @@ async def test_physical_stock_m1_logging(caplog):
     import logging
     import sys
     sys.path.insert(0, "app")
-    from agent import log_m1_achieved
-    with caplog.at_level(logging.INFO, logger="agent"):
+    from milestones import log_m1_achieved
+    with caplog.at_level(logging.INFO, logger="milestones"):
         log_m1_achieved(["CRYO", "UCLD", "COLD"], 1000.0, 350.0)
     assert "M1.achieved" in caplog.text
     assert "CRYO" in caplog.text

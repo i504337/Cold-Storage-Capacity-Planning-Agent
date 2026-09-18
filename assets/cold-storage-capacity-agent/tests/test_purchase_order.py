@@ -47,8 +47,8 @@ async def test_purchase_order_m2_logging(caplog):
     """Verify M2.achieved is logged when inbound receipts are projected."""
     import logging, sys
     sys.path.insert(0, "app")
-    from agent import log_m2_achieved
-    with caplog.at_level(logging.INFO, logger="agent"):
+    from milestones import log_m2_achieved
+    with caplog.at_level(logging.INFO, logger="milestones"):
         log_m2_achieved(5, ["CRYO", "UCLD"], "2026-09-18", "2026-10-02", 750.0)
     assert "M2.achieved" in caplog.text
     assert "CRYO" in caplog.text
