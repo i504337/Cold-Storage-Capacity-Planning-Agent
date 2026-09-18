@@ -1,0 +1,63 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: agent
+
+metadata:
+  name: cold-storage-capacity-agent
+  version: "1.0.0"
+
+provides:
+  apis:
+    - name: cold-storage-capacity-agent
+      kind: a2a
+      ordId: customer.build:apiResource:cold-storage-capacity-25da4.cold-storage-capacity-agent:v1
+      description: "Cold storage capacity planning AI agent — answers natural language queries about EWM storage availability, projects time-phased capacity over a 1-2 week horizon, and raises breach alerts"
+
+container:
+  buildPath: .
+  port: 5000
+
+probes:
+  startup:
+    path: /.well-known/agent.json
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 18
+  liveness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+requires:
+  - name: sap-s4-ce-whsephysicalstockproducts-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-ce-whsephysicalstockproducts-0001-mcp-server:v1
+  - name: sap-s4-op-warehousestoragebin-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-op-warehousestoragebin-0001-mcp-server:v1
+  - name: sap-s4-warehouseavailablestock-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-warehouseavailablestock-0001-mcp-server:v1
+  - name: sap-s4-ce-purchaseorder-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-ce-purchaseorder-0001-mcp-server:v1
+  - name: sap-s4-ce-stocktransportorder-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-ce-stocktransportorder-0001-mcp-server:v1
+  - name: sap-s4-warehouseinbounddelivery-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-warehouseinbounddelivery-0001-mcp-server:v1
+  - name: sap-s4-warehouseorder-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-warehouseorder-0001-mcp-server:v1
+  - name: sap-s4-warehouseoutbdeliveryorder-0001-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-warehouseoutbdeliveryorder-0001-mcp-server:v1

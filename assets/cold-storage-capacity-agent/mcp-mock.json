@@ -1,0 +1,1578 @@
+{
+  "servers": {
+    "sap-s4-ce-purchaseorder-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_purchaseorder_for_sap_self": {
+          "description": "Retrieve a list of entities from the PurchaseOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_purchaseorder_for_sap_self": {
+          "description": "Create a new instance of the PurchaseOrder EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_purchaseorder_for_sap_self": {
+          "description": "Update an entity in PurchaseOrder EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_purchaseorder_for_sap_self": {
+          "description": "Delete an entity from PurchaseOrder EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_purchaseorder_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the PurchaseOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_purchaseorder_for_sap_self": {
+          "description": "Get the total count of entities in the PurchaseOrder collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_purchaseorderitem_for_sap_self": {
+          "description": "Retrieve a list of entities from the PurchaseOrderItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_purchaseorderitem_for_sap_self": {
+          "description": "Create a new instance of the PurchaseOrderItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_purchaseorderitem_for_sap_self": {
+          "description": "Update an entity in PurchaseOrderItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_purchaseorderitem_for_sap_self": {
+          "description": "Delete an entity from PurchaseOrderItem EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_purchaseorderitem_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the PurchaseOrderItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_purchaseorderitem_for_sap_self": {
+          "description": "Get the total count of entities in the PurchaseOrderItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_purchaseorderscheduleline_for_sap_self": {
+          "description": "Retrieve a list of entities from the PurchaseOrderScheduleLine collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_purchaseorderscheduleline_for_sap_self": {
+          "description": "Create a new instance of the PurchaseOrderScheduleLine EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_purchaseorderscheduleline_for_sap_self": {
+          "description": "Update an entity in PurchaseOrderScheduleLine EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_purchaseorderscheduleline_for_sap_self": {
+          "description": "Delete an entity from PurchaseOrderScheduleLine EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_purchaseorderscheduleline_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the PurchaseOrderScheduleLine collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_purchaseorderscheduleline_for_sap_self": {
+          "description": "Get the total count of entities in the PurchaseOrderScheduleLine collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__purchaseorderitem_in_purchaseorder_for_sap_self": {
+          "description": "Navigate from PurchaseOrder to related PurchaseOrderItem_Type entities via the '_PurchaseOrderItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__purchaseorderitem_in_purchaseorder_for_sap_self": {
+          "description": "Create a new PurchaseOrderItem_Type entity via the '_PurchaseOrderItem' navigation property of PurchaseOrder. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__purchaseorderitem_in_purchaseorder_for_sap_self": {
+          "description": "Count PurchaseOrderItem_Type entities accessible via the '_PurchaseOrderItem' navigation property of PurchaseOrder in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self": {
+          "description": "Navigate from PurchaseOrderItem to related PurchaseOrderScheduleLine_Type entities via the '_PurchaseOrderScheduleLineTP' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self": {
+          "description": "Create a new PurchaseOrderScheduleLine_Type entity via the '_PurchaseOrderScheduleLineTP' navigation property of PurchaseOrderItem. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self": {
+          "description": "Count PurchaseOrderScheduleLine_Type entities accessible via the '_PurchaseOrderScheduleLineTP' navigation property of PurchaseOrderItem in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get__purchaseorder_in_purchaseorderitem_for_sap_self": {
+          "description": "Navigate from PurchaseOrderItem to the related PurchaseOrder_Type entity via the '_PurchaseOrder' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update__purchaseorder_in_purchaseorderitem_for_sap_self": {
+          "description": "Update the PurchaseOrder_Type entity navigated from PurchaseOrderItem via the '_PurchaseOrder' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-ce-stocktransportorder-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_stocktransportorder_for_sap_self": {
+          "description": "Retrieve a list of entities from the StockTransportOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_stocktransportorder_for_sap_self": {
+          "description": "Create a new instance of the StockTransportOrder EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_stocktransportorder_for_sap_self": {
+          "description": "Update an entity in StockTransportOrder EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_stocktransportorder_for_sap_self": {
+          "description": "Delete an entity from StockTransportOrder EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_stocktransportorder_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the StockTransportOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_stocktransportorder_for_sap_self": {
+          "description": "Get the total count of entities in the StockTransportOrder collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_stocktransportorderitem_for_sap_self": {
+          "description": "Retrieve a list of entities from the StockTransportOrderItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_stocktransportorderitem_for_sap_self": {
+          "description": "Create a new instance of the StockTransportOrderItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_stocktransportorderitem_for_sap_self": {
+          "description": "Update an entity in StockTransportOrderItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_stocktransportorderitem_for_sap_self": {
+          "description": "Delete an entity from StockTransportOrderItem EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_stocktransportorderitem_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the StockTransportOrderItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_stocktransportorderitem_for_sap_self": {
+          "description": "Get the total count of entities in the StockTransportOrderItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_stoscheduleline_for_sap_self": {
+          "description": "Retrieve a list of entities from the STOScheduleLine collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_stoscheduleline_for_sap_self": {
+          "description": "Create a new instance of the STOScheduleLine EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_stoscheduleline_for_sap_self": {
+          "description": "Update an entity in STOScheduleLine EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_stoscheduleline_for_sap_self": {
+          "description": "Delete an entity from STOScheduleLine EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_stoscheduleline_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the STOScheduleLine collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_stoscheduleline_for_sap_self": {
+          "description": "Get the total count of entities in the STOScheduleLine collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__stocktransportorderitem_in_stocktransportorder_for_sap_self": {
+          "description": "Navigate from StockTransportOrder to related StockTransportOrderItem_Type entities via the '_StockTransportOrderItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__stocktransportorderitem_in_stocktransportorder_for_sap_self": {
+          "description": "Create a new StockTransportOrderItem_Type entity via the '_StockTransportOrderItem' navigation property of StockTransportOrder. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__stocktransportorderitem_in_stocktransportorder_for_sap_self": {
+          "description": "Count StockTransportOrderItem_Type entities accessible via the '_StockTransportOrderItem' navigation property of StockTransportOrder in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__stoscheduleline_in_stocktransportorderitem_for_sap_self": {
+          "description": "Navigate from StockTransportOrderItem to related StockTransportOrderScheduleLine_Type entities via the '_STOScheduleLine' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__stoscheduleline_in_stocktransportorderitem_for_sap_self": {
+          "description": "Create a new StockTransportOrderScheduleLine_Type entity via the '_STOScheduleLine' navigation property of StockTransportOrderItem. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__stoscheduleline_in_stocktransportorderitem_for_sap_self": {
+          "description": "Count StockTransportOrderScheduleLine_Type entities accessible via the '_STOScheduleLine' navigation property of StockTransportOrderItem in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-ce-whsephysicalstockproducts-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Retrieve a list of entities from the WarehousePhysicalStockProducts collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Create a new instance of the WarehousePhysicalStockProducts EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Update an entity in WarehousePhysicalStockProducts EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Delete an entity from WarehousePhysicalStockProducts EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WarehousePhysicalStockProducts collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_warehousephysicalstockproducts_for_sap_self": {
+          "description": "Get the total count of entities in the WarehousePhysicalStockProducts collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-op-warehousestoragebin-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_warehousestoragebin_for_sap_self": {
+          "description": "Retrieve a list of entities from the WarehouseStorageBin collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_warehousestoragebin_for_sap_self": {
+          "description": "Create a new instance of the WarehouseStorageBin EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_warehousestoragebin_for_sap_self": {
+          "description": "Update an entity in WarehouseStorageBin EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_warehousestoragebin_for_sap_self": {
+          "description": "Delete an entity from WarehouseStorageBin EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_warehousestoragebin_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WarehouseStorageBin collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_warehousestoragebin_for_sap_self": {
+          "description": "Get the total count of entities in the WarehouseStorageBin collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-warehouseavailablestock-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_warehouseavailablestock_for_sap_self": {
+          "description": "Retrieve a list of entities from the WarehouseAvailableStock collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_warehouseavailablestock_for_sap_self": {
+          "description": "Create a new instance of the WarehouseAvailableStock EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_warehouseavailablestock_for_sap_self": {
+          "description": "Update an entity in WarehouseAvailableStock EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_warehouseavailablestock_for_sap_self": {
+          "description": "Delete an entity from WarehouseAvailableStock EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_warehouseavailablestock_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WarehouseAvailableStock collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_warehouseavailablestock_for_sap_self": {
+          "description": "Get the total count of entities in the WarehouseAvailableStock collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-warehouseinbounddelivery-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Retrieve a list of entities from the WhseInboundDeliveryHead collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Create a new instance of the WhseInboundDeliveryHead EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Update an entity in WhseInboundDeliveryHead EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Delete an entity from WhseInboundDeliveryHead EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WhseInboundDeliveryHead collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Get the total count of entities in the WhseInboundDeliveryHead collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Retrieve a list of entities from the WhseInboundDeliveryItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Create a new instance of the WhseInboundDeliveryItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Update an entity in WhseInboundDeliveryItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Delete an entity from WhseInboundDeliveryItem EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WhseInboundDeliveryItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_whseinbounddeliveryitem_for_sap_self": {
+          "description": "Get the total count of entities in the WhseInboundDeliveryItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Navigate from WhseInboundDeliveryHead to related WhseInboundDeliveryItemType entities via the '_WhseInbDeliveryItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Create a new WhseInboundDeliveryItemType entity via the '_WhseInbDeliveryItem' navigation property of WhseInboundDeliveryHead. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self": {
+          "description": "Count WhseInboundDeliveryItemType entities accessible via the '_WhseInbDeliveryItem' navigation property of WhseInboundDeliveryHead in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-warehouseorder-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_warehouseorder_for_sap_self": {
+          "description": "Retrieve a list of entities from the WarehouseOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_warehouseorder_for_sap_self": {
+          "description": "Create a new instance of the WarehouseOrder EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_warehouseorder_for_sap_self": {
+          "description": "Update an entity in WarehouseOrder EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_warehouseorder_for_sap_self": {
+          "description": "Delete an entity from WarehouseOrder EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_warehouseorder_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WarehouseOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_warehouseorder_for_sap_self": {
+          "description": "Get the total count of entities in the WarehouseOrder collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_warehousetask_for_sap_self": {
+          "description": "Retrieve a list of entities from the WarehouseTask collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_warehousetask_for_sap_self": {
+          "description": "Create a new instance of the WarehouseTask EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_warehousetask_for_sap_self": {
+          "description": "Update an entity in WarehouseTask EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_warehousetask_for_sap_self": {
+          "description": "Delete an entity from WarehouseTask EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_warehousetask_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WarehouseTask collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_warehousetask_for_sap_self": {
+          "description": "Get the total count of entities in the WarehouseTask collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__warehousetask_in_warehouseorder_for_sap_self": {
+          "description": "Navigate from WarehouseOrder to related WarehouseTaskType entities via the '_WarehouseTask' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__warehousetask_in_warehouseorder_for_sap_self": {
+          "description": "Create a new WarehouseTaskType entity via the '_WarehouseTask' navigation property of WarehouseOrder. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__warehousetask_in_warehouseorder_for_sap_self": {
+          "description": "Count WarehouseTaskType entities accessible via the '_WarehouseTask' navigation property of WarehouseOrder in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    },
+    "sap-s4-warehouseoutbdeliveryorder-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service.",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Retrieve a list of entities from the WhseOutboundDeliveryOrderHead collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Create a new instance of the WhseOutboundDeliveryOrderHead EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Update an entity in WhseOutboundDeliveryOrderHead EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Delete an entity from WhseOutboundDeliveryOrderHead EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WhseOutboundDeliveryOrderHead collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Get the total count of entities in the WhseOutboundDeliveryOrderHead collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Retrieve a list of entities from the WhseOutboundDeliveryOrderItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Create a new instance of the WhseOutboundDeliveryOrderItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "update_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Update an entity in WhseOutboundDeliveryOrderItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "delete_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Delete an entity from WhseOutboundDeliveryOrderItem EntitySet in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "get_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Retrieve a single entity by its key from the WhseOutboundDeliveryOrderItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count_whseoutbounddeliveryorderitem_for_sap_self": {
+          "description": "Get the total count of entities in the WhseOutboundDeliveryOrderItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "list__whseoutbdeliveryorderitem_in_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Navigate from WhseOutboundDeliveryOrderHead to related WhseOutboundDeliveryOrderItemType entities via the '_WhseOutbDeliveryOrderItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "value": [
+              {
+                "id": "mock-001",
+                "status": "Active"
+              }
+            ]
+          }
+        },
+        "create__whseoutbdeliveryorderitem_in_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Create a new WhseOutboundDeliveryOrderItemType entity via the '_WhseOutbDeliveryOrderItem' navigation property of WhseOutboundDeliveryOrderHead. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        },
+        "count__whseoutbdeliveryorderitem_in_whseoutbounddeliveryorderhead_for_sap_self": {
+          "description": "Count WhseOutboundDeliveryOrderItemType entities accessible via the '_WhseOutbDeliveryOrderItem' navigation property of WhseOutboundDeliveryOrderHead in the sap_self service. Returns the total number of matching entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {}
+          },
+          "mock_response": {
+            "id": "mock-001",
+            "status": "Active"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "cold-storage-capacity-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 8,
+    "total_tools": 129,
+    "generated_from": [
+      "translation.json",
+      "translation.json",
+      "translation.json",
+      "translation.json",
+      "translation.json",
+      "translation.json",
+      "translation.json",
+      "translation.json"
+    ],
+    "generation_date": "2026-09-18"
+  }
+}

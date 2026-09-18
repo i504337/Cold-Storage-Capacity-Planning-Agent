@@ -1,0 +1,2315 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_purchaseorder_for_sap_self",
+    "title": "list_PurchaseOrder_for_sap_self",
+    "description": "Retrieve a list of entities from the PurchaseOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_purchaseorder_for_sap_self",
+    "title": "create_PurchaseOrder_for_sap_self",
+    "description": "Create a new instance of the PurchaseOrder EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderType",
+            "newParameterName": "purchaseordertype"
+          },
+          {
+            "name": "Supplier",
+            "newParameterName": "supplier"
+          },
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "PurchasingOrganization",
+            "newParameterName": "purchasingorganization"
+          },
+          {
+            "name": "PurchasingGroup",
+            "newParameterName": "purchasinggroup"
+          },
+          {
+            "name": "DocumentCurrency",
+            "newParameterName": "documentcurrency"
+          },
+          {
+            "name": "CreationDate",
+            "newParameterName": "creationdate"
+          },
+          {
+            "name": "PurchaseOrderDate",
+            "newParameterName": "purchaseorderdate"
+          },
+          {
+            "name": "_PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_purchaseorder_for_sap_self",
+    "title": "update_PurchaseOrder_for_sap_self",
+    "description": "Update an entity in PurchaseOrder EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderType",
+            "newParameterName": "purchaseordertype"
+          },
+          {
+            "name": "Supplier",
+            "newParameterName": "supplier"
+          },
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "PurchasingOrganization",
+            "newParameterName": "purchasingorganization"
+          },
+          {
+            "name": "PurchasingGroup",
+            "newParameterName": "purchasinggroup"
+          },
+          {
+            "name": "DocumentCurrency",
+            "newParameterName": "documentcurrency"
+          },
+          {
+            "name": "CreationDate",
+            "newParameterName": "creationdate"
+          },
+          {
+            "name": "PurchaseOrderDate",
+            "newParameterName": "purchaseorderdate"
+          },
+          {
+            "name": "_PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_purchaseorder_for_sap_self",
+    "title": "delete_PurchaseOrder_for_sap_self",
+    "description": "Delete an entity from PurchaseOrder EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_purchaseorder_for_sap_self",
+    "title": "get_PurchaseOrder_for_sap_self",
+    "description": "Retrieve a single entity by its key from the PurchaseOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_purchaseorder_for_sap_self",
+    "title": "count_PurchaseOrder_for_sap_self",
+    "description": "Get the total count of entities in the PurchaseOrder collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_purchaseorderitem_for_sap_self",
+    "title": "list_PurchaseOrderItem_for_sap_self",
+    "description": "Retrieve a list of entities from the PurchaseOrderItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_purchaseorderitem_for_sap_self",
+    "title": "create_PurchaseOrderItem_for_sap_self",
+    "description": "Create a new instance of the PurchaseOrderItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "Material",
+            "newParameterName": "material"
+          },
+          {
+            "name": "Plant",
+            "newParameterName": "plant"
+          },
+          {
+            "name": "StorageLocation",
+            "newParameterName": "storagelocation"
+          },
+          {
+            "name": "OrderQuantity",
+            "newParameterName": "orderquantity"
+          },
+          {
+            "name": "PurchaseOrderQuantityUnit",
+            "newParameterName": "purchaseorderquantityunit"
+          },
+          {
+            "name": "IsCompletelyDelivered",
+            "newParameterName": "iscompletelydelivered"
+          },
+          {
+            "name": "_PurchaseOrderScheduleLineTP",
+            "newParameterName": "purchaseorderschedulelinetp"
+          },
+          {
+            "name": "_PurchaseOrder",
+            "newParameterName": "purchaseorder_2"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_purchaseorderitem_for_sap_self",
+    "title": "update_PurchaseOrderItem_for_sap_self",
+    "description": "Update an entity in PurchaseOrderItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "Material",
+            "newParameterName": "material"
+          },
+          {
+            "name": "Plant",
+            "newParameterName": "plant"
+          },
+          {
+            "name": "StorageLocation",
+            "newParameterName": "storagelocation"
+          },
+          {
+            "name": "OrderQuantity",
+            "newParameterName": "orderquantity"
+          },
+          {
+            "name": "PurchaseOrderQuantityUnit",
+            "newParameterName": "purchaseorderquantityunit"
+          },
+          {
+            "name": "IsCompletelyDelivered",
+            "newParameterName": "iscompletelydelivered"
+          },
+          {
+            "name": "_PurchaseOrderScheduleLineTP",
+            "newParameterName": "purchaseorderschedulelinetp"
+          },
+          {
+            "name": "_PurchaseOrder",
+            "newParameterName": "purchaseorder_2"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_purchaseorderitem_for_sap_self",
+    "title": "delete_PurchaseOrderItem_for_sap_self",
+    "description": "Delete an entity from PurchaseOrderItem EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_purchaseorderitem_for_sap_self",
+    "title": "get_PurchaseOrderItem_for_sap_self",
+    "description": "Retrieve a single entity by its key from the PurchaseOrderItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_purchaseorderitem_for_sap_self",
+    "title": "count_PurchaseOrderItem_for_sap_self",
+    "description": "Get the total count of entities in the PurchaseOrderItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_purchaseorderscheduleline_for_sap_self",
+    "title": "list_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Retrieve a list of entities from the PurchaseOrderScheduleLine collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_purchaseorderscheduleline_for_sap_self",
+    "title": "create_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Create a new instance of the PurchaseOrderScheduleLine EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "ScheduleLine",
+            "newParameterName": "scheduleline"
+          },
+          {
+            "name": "ScheduleLineDeliveryDate",
+            "newParameterName": "schedulelinedeliverydate"
+          },
+          {
+            "name": "ScheduleLineOrderQuantity",
+            "newParameterName": "schedulelineorderquantity"
+          },
+          {
+            "name": "OpenPurchaseOrderQuantity",
+            "newParameterName": "openpurchaseorderquantity"
+          },
+          {
+            "name": "PurchaseOrderQuantityUnit",
+            "newParameterName": "purchaseorderquantityunit"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_purchaseorderscheduleline_for_sap_self",
+    "title": "update_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Update an entity in PurchaseOrderScheduleLine EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "ScheduleLine",
+            "newParameterName": "scheduleline"
+          },
+          {
+            "name": "ScheduleLineDeliveryDate",
+            "newParameterName": "schedulelinedeliverydate"
+          },
+          {
+            "name": "ScheduleLineOrderQuantity",
+            "newParameterName": "schedulelineorderquantity"
+          },
+          {
+            "name": "OpenPurchaseOrderQuantity",
+            "newParameterName": "openpurchaseorderquantity"
+          },
+          {
+            "name": "PurchaseOrderQuantityUnit",
+            "newParameterName": "purchaseorderquantityunit"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_purchaseorderscheduleline_for_sap_self",
+    "title": "delete_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Delete an entity from PurchaseOrderScheduleLine EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "ScheduleLine",
+            "newParameterName": "scheduleline"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_purchaseorderscheduleline_for_sap_self",
+    "title": "get_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Retrieve a single entity by its key from the PurchaseOrderScheduleLine collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          },
+          {
+            "name": "ScheduleLine",
+            "newParameterName": "scheduleline"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_purchaseorderscheduleline_for_sap_self",
+    "title": "count_PurchaseOrderScheduleLine_for_sap_self",
+    "description": "Get the total count of entities in the PurchaseOrderScheduleLine collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderScheduleLine",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list__purchaseorderitem_in_purchaseorder_for_sap_self",
+    "title": "list__PurchaseOrderItem_in_PurchaseOrder_for_sap_self",
+    "description": "Navigate from PurchaseOrder to related PurchaseOrderItem_Type entities via the '_PurchaseOrderItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "navigationProperty": {
+          "name": "_PurchaseOrderItem",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create__purchaseorderitem_in_purchaseorder_for_sap_self",
+    "title": "create__PurchaseOrderItem_in_PurchaseOrder_for_sap_self",
+    "description": "Create a new PurchaseOrderItem_Type entity via the '_PurchaseOrderItem' navigation property of PurchaseOrder. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "navigationProperty": {
+          "name": "_PurchaseOrderItem",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder_2"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            },
+            {
+              "name": "Material",
+              "newParameterName": "material"
+            },
+            {
+              "name": "Plant",
+              "newParameterName": "plant"
+            },
+            {
+              "name": "StorageLocation",
+              "newParameterName": "storagelocation"
+            },
+            {
+              "name": "OrderQuantity",
+              "newParameterName": "orderquantity"
+            },
+            {
+              "name": "PurchaseOrderQuantityUnit",
+              "newParameterName": "purchaseorderquantityunit"
+            },
+            {
+              "name": "IsCompletelyDelivered",
+              "newParameterName": "iscompletelydelivered"
+            },
+            {
+              "name": "_PurchaseOrderScheduleLineTP",
+              "newParameterName": "purchaseorderschedulelinetp"
+            },
+            {
+              "name": "_PurchaseOrder",
+              "newParameterName": "purchaseorder_3"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count__purchaseorderitem_in_purchaseorder_for_sap_self",
+    "title": "count__PurchaseOrderItem_in_PurchaseOrder_for_sap_self",
+    "description": "Count PurchaseOrderItem_Type entities accessible via the '_PurchaseOrderItem' navigation property of PurchaseOrder in the sap_self service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrder",
+        "navigationProperty": {
+          "name": "_PurchaseOrderItem",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self",
+    "title": "list__PurchaseOrderScheduleLineTP_in_PurchaseOrderItem_for_sap_self",
+    "description": "Navigate from PurchaseOrderItem to related PurchaseOrderScheduleLine_Type entities via the '_PurchaseOrderScheduleLineTP' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "navigationProperty": {
+          "name": "_PurchaseOrderScheduleLineTP",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self",
+    "title": "create__PurchaseOrderScheduleLineTP_in_PurchaseOrderItem_for_sap_self",
+    "description": "Create a new PurchaseOrderScheduleLine_Type entity via the '_PurchaseOrderScheduleLineTP' navigation property of PurchaseOrderItem. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "navigationProperty": {
+          "name": "_PurchaseOrderScheduleLineTP",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder_2"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem_2"
+            },
+            {
+              "name": "ScheduleLine",
+              "newParameterName": "scheduleline"
+            },
+            {
+              "name": "ScheduleLineDeliveryDate",
+              "newParameterName": "schedulelinedeliverydate"
+            },
+            {
+              "name": "ScheduleLineOrderQuantity",
+              "newParameterName": "schedulelineorderquantity"
+            },
+            {
+              "name": "OpenPurchaseOrderQuantity",
+              "newParameterName": "openpurchaseorderquantity"
+            },
+            {
+              "name": "PurchaseOrderQuantityUnit",
+              "newParameterName": "purchaseorderquantityunit"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count__purchaseorderschedulelinetp_in_purchaseorderitem_for_sap_self",
+    "title": "count__PurchaseOrderScheduleLineTP_in_PurchaseOrderItem_for_sap_self",
+    "description": "Count PurchaseOrderScheduleLine_Type entities accessible via the '_PurchaseOrderScheduleLineTP' navigation property of PurchaseOrderItem in the sap_self service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "navigationProperty": {
+          "name": "_PurchaseOrderScheduleLineTP",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get__purchaseorder_in_purchaseorderitem_for_sap_self",
+    "title": "get__PurchaseOrder_in_PurchaseOrderItem_for_sap_self",
+    "description": "Navigate from PurchaseOrderItem to the related PurchaseOrder_Type entity via the '_PurchaseOrder' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "navigationProperty": {
+          "name": "_PurchaseOrder",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update__purchaseorder_in_purchaseorderitem_for_sap_self",
+    "title": "update__PurchaseOrder_in_PurchaseOrderItem_for_sap_self",
+    "description": "Update the PurchaseOrder_Type entity navigated from PurchaseOrderItem via the '_PurchaseOrder' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "PurchaseOrderItem",
+        "navigationProperty": {
+          "name": "_PurchaseOrder",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "PurchaseOrderType",
+              "newParameterName": "purchaseordertype"
+            },
+            {
+              "name": "Supplier",
+              "newParameterName": "supplier"
+            },
+            {
+              "name": "CompanyCode",
+              "newParameterName": "companycode"
+            },
+            {
+              "name": "PurchasingOrganization",
+              "newParameterName": "purchasingorganization"
+            },
+            {
+              "name": "PurchasingGroup",
+              "newParameterName": "purchasinggroup"
+            },
+            {
+              "name": "DocumentCurrency",
+              "newParameterName": "documentcurrency"
+            },
+            {
+              "name": "CreationDate",
+              "newParameterName": "creationdate"
+            },
+            {
+              "name": "PurchaseOrderDate",
+              "newParameterName": "purchaseorderdate"
+            },
+            {
+              "name": "_PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem_2"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "PurchaseOrder",
+            "newParameterName": "purchaseorder"
+          },
+          {
+            "name": "PurchaseOrderItem",
+            "newParameterName": "purchaseorderitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,20 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-s4-op-warehousestoragebin-0001-mcp-server
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+requires:
+  - name: OP_WAREHOUSESTORAGEBIN_0001
+    kind: api
+    ordId: sap.s4:apiResource:OP_WAREHOUSESTORAGEBIN_0001:v1
+
+provides:
+  apis:
+    - name: sap-s4-op-warehousestoragebin-0001-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:cold-storage-capacity-25da4.sap-s4-op-warehousestoragebin-0001-mcp-server:v1

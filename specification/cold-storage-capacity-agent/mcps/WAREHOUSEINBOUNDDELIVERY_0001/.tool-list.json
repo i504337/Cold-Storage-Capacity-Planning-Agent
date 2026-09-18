@@ -1,0 +1,1322 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_whseinbounddeliveryhead_for_sap_self",
+    "title": "list_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Retrieve a list of entities from the WhseInboundDeliveryHead collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_whseinbounddeliveryhead_for_sap_self",
+    "title": "create_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Create a new instance of the WhseInboundDeliveryHead EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "EWMDeliveryDocumentCategory",
+            "newParameterName": "ewmdeliverydocumentcategory"
+          },
+          {
+            "name": "PlannedDeliveryUTCDateTime",
+            "newParameterName": "planneddeliveryutcdatetime"
+          },
+          {
+            "name": "_WhseInbDeliveryItem",
+            "newParameterName": "whseinbdeliveryitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_whseinbounddeliveryhead_for_sap_self",
+    "title": "update_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Update an entity in WhseInboundDeliveryHead EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "EWMDeliveryDocumentCategory",
+            "newParameterName": "ewmdeliverydocumentcategory"
+          },
+          {
+            "name": "PlannedDeliveryUTCDateTime",
+            "newParameterName": "planneddeliveryutcdatetime"
+          },
+          {
+            "name": "_WhseInbDeliveryItem",
+            "newParameterName": "whseinbdeliveryitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_whseinbounddeliveryhead_for_sap_self",
+    "title": "delete_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Delete an entity from WhseInboundDeliveryHead EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_whseinbounddeliveryhead_for_sap_self",
+    "title": "get_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Retrieve a single entity by its key from the WhseInboundDeliveryHead collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_whseinbounddeliveryhead_for_sap_self",
+    "title": "count_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Get the total count of entities in the WhseInboundDeliveryHead collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_whseinbounddeliveryitem_for_sap_self",
+    "title": "list_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Retrieve a list of entities from the WhseInboundDeliveryItem collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_whseinbounddeliveryitem_for_sap_self",
+    "title": "create_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Create a new instance of the WhseInboundDeliveryItem EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMInboundDeliveryItem",
+            "newParameterName": "ewminbounddeliveryitem"
+          },
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "Product",
+            "newParameterName": "product"
+          },
+          {
+            "name": "Batch",
+            "newParameterName": "batch"
+          },
+          {
+            "name": "ProductQuantity",
+            "newParameterName": "productquantity"
+          },
+          {
+            "name": "QuantityUnit",
+            "newParameterName": "quantityunit"
+          },
+          {
+            "name": "GoodsReceiptStatus",
+            "newParameterName": "goodsreceiptstatus"
+          },
+          {
+            "name": "PutawayStatus",
+            "newParameterName": "putawaystatus"
+          },
+          {
+            "name": "PurchasingDocument",
+            "newParameterName": "purchasingdocument"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_whseinbounddeliveryitem_for_sap_self",
+    "title": "update_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Update an entity in WhseInboundDeliveryItem EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMInboundDeliveryItem",
+            "newParameterName": "ewminbounddeliveryitem"
+          },
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "Product",
+            "newParameterName": "product"
+          },
+          {
+            "name": "Batch",
+            "newParameterName": "batch"
+          },
+          {
+            "name": "ProductQuantity",
+            "newParameterName": "productquantity"
+          },
+          {
+            "name": "QuantityUnit",
+            "newParameterName": "quantityunit"
+          },
+          {
+            "name": "GoodsReceiptStatus",
+            "newParameterName": "goodsreceiptstatus"
+          },
+          {
+            "name": "PutawayStatus",
+            "newParameterName": "putawaystatus"
+          },
+          {
+            "name": "PurchasingDocument",
+            "newParameterName": "purchasingdocument"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_whseinbounddeliveryitem_for_sap_self",
+    "title": "delete_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Delete an entity from WhseInboundDeliveryItem EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMInboundDeliveryItem",
+            "newParameterName": "ewminbounddeliveryitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_whseinbounddeliveryitem_for_sap_self",
+    "title": "get_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Retrieve a single entity by its key from the WhseInboundDeliveryItem collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          },
+          {
+            "name": "EWMInboundDeliveryItem",
+            "newParameterName": "ewminbounddeliveryitem"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_whseinbounddeliveryitem_for_sap_self",
+    "title": "count_WhseInboundDeliveryItem_for_sap_self",
+    "description": "Get the total count of entities in the WhseInboundDeliveryItem collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryItem",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self",
+    "title": "list__WhseInbDeliveryItem_in_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Navigate from WhseInboundDeliveryHead to related WhseInboundDeliveryItemType entities via the '_WhseInbDeliveryItem' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "navigationProperty": {
+          "name": "_WhseInbDeliveryItem",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self",
+    "title": "create__WhseInbDeliveryItem_in_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Create a new WhseInboundDeliveryItemType entity via the '_WhseInbDeliveryItem' navigation property of WhseInboundDeliveryHead. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "navigationProperty": {
+          "name": "_WhseInbDeliveryItem",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "EWMInboundDelivery",
+              "newParameterName": "ewminbounddelivery_2"
+            },
+            {
+              "name": "EWMInboundDeliveryItem",
+              "newParameterName": "ewminbounddeliveryitem"
+            },
+            {
+              "name": "EWMWarehouse",
+              "newParameterName": "ewmwarehouse"
+            },
+            {
+              "name": "Product",
+              "newParameterName": "product"
+            },
+            {
+              "name": "Batch",
+              "newParameterName": "batch"
+            },
+            {
+              "name": "ProductQuantity",
+              "newParameterName": "productquantity"
+            },
+            {
+              "name": "QuantityUnit",
+              "newParameterName": "quantityunit"
+            },
+            {
+              "name": "GoodsReceiptStatus",
+              "newParameterName": "goodsreceiptstatus"
+            },
+            {
+              "name": "PutawayStatus",
+              "newParameterName": "putawaystatus"
+            },
+            {
+              "name": "PurchasingDocument",
+              "newParameterName": "purchasingdocument"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count__whseinbdeliveryitem_in_whseinbounddeliveryhead_for_sap_self",
+    "title": "count__WhseInbDeliveryItem_in_WhseInboundDeliveryHead_for_sap_self",
+    "description": "Count WhseInboundDeliveryItemType entities accessible via the '_WhseInbDeliveryItem' navigation property of WhseInboundDeliveryHead in the sap_self service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "WhseInboundDeliveryHead",
+        "navigationProperty": {
+          "name": "_WhseInbDeliveryItem",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMInboundDelivery",
+            "newParameterName": "ewminbounddelivery"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,18 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: cold-storage-capacity-25da4
+  version: "1.0.0"
+  description: "AI agent for time-phased cold storage capacity planning in SAP EWM — natural language queries, capacity projections, and breach alerting for temperature-controlled storage types"
+
+assets:
+  - ref: ./assets/cold-storage-capacity-agent/asset.yaml
+  - ref: ./assets/sap-s4-ce-whsephysicalstockproducts-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-op-warehousestoragebin-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-warehouseavailablestock-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-purchaseorder-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-ce-stocktransportorder-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-warehouseinbounddelivery-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-warehouseorder-0001-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-warehouseoutbdeliveryorder-0001-mcp-server/asset.yaml

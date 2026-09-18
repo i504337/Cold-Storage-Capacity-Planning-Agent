@@ -1,0 +1,36 @@
+{
+  "description": "Registry of temperature-controlled EWM storage types targeted by this agent. Each entry maps a storage type code to its label, temperature range, and capacity unit preference.",
+  "version": "1.0.0",
+  "storage_types": [
+    {
+      "code": "CRYO",
+      "label": "Cryo Freezer",
+      "temperature_range": "-80°C",
+      "description": "Ultra-low temperature freezer storage for cryogenic materials such as biological samples, vaccines requiring deep-freeze storage",
+      "capacity_unit_preference": ["capacity_consumption_value", "volume_liters", "weight_kg"],
+      "typical_materials": ["biological samples", "mRNA vaccines", "cryogenic reagents"]
+    },
+    {
+      "code": "UCOLD",
+      "label": "Ultra-Cold Refrigerator",
+      "temperature_range": "-20°C",
+      "description": "Ultra-cold refrigerator storage for materials requiring sub-zero but non-cryogenic temperatures",
+      "capacity_unit_preference": ["capacity_consumption_value", "volume_liters", "weight_kg"],
+      "typical_materials": ["frozen APIs", "plasma products", "certain diagnostics"]
+    },
+    {
+      "code": "CROOM",
+      "label": "Controlled Cold Room",
+      "temperature_range": "2–8°C",
+      "description": "Controlled cold room / refrigerator storage for materials requiring standard refrigeration",
+      "capacity_unit_preference": ["capacity_consumption_value", "volume_liters", "weight_kg"],
+      "typical_materials": ["insulin", "vaccines (standard)", "temperature-sensitive reagents", "perishable FMCG"]
+    }
+  ],
+  "notes": [
+    "Storage type codes must match EWMStorageType values configured in the connected SAP EWM system.",
+    "Update the 'code' fields to match your system's actual EWM storage type codes.",
+    "The capacity_unit_preference list defines the fallback order when resolving capacity values from API responses.",
+    "Ambient storage types are explicitly out of scope for this agent."
+  ]
+}

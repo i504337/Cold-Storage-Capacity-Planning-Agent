@@ -1,0 +1,1442 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_warehouseorder_for_sap_self",
+    "title": "list_WarehouseOrder_for_sap_self",
+    "description": "Retrieve a list of entities from the WarehouseOrder collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_warehouseorder_for_sap_self",
+    "title": "create_WarehouseOrder_for_sap_self",
+    "description": "Create a new instance of the WarehouseOrder EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          },
+          {
+            "name": "WarehouseOrderStatus",
+            "newParameterName": "warehouseorderstatus"
+          },
+          {
+            "name": "WhseOrderCreationDateTime",
+            "newParameterName": "whseordercreationdatetime"
+          },
+          {
+            "name": "WarehouseOrderCreationRule",
+            "newParameterName": "warehouseordercreationrule"
+          },
+          {
+            "name": "_WarehouseTask",
+            "newParameterName": "warehousetask"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_warehouseorder_for_sap_self",
+    "title": "update_WarehouseOrder_for_sap_self",
+    "description": "Update an entity in WarehouseOrder EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          },
+          {
+            "name": "WarehouseOrderStatus",
+            "newParameterName": "warehouseorderstatus"
+          },
+          {
+            "name": "WhseOrderCreationDateTime",
+            "newParameterName": "whseordercreationdatetime"
+          },
+          {
+            "name": "WarehouseOrderCreationRule",
+            "newParameterName": "warehouseordercreationrule"
+          },
+          {
+            "name": "_WarehouseTask",
+            "newParameterName": "warehousetask"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_warehouseorder_for_sap_self",
+    "title": "delete_WarehouseOrder_for_sap_self",
+    "description": "Delete an entity from WarehouseOrder EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_warehouseorder_for_sap_self",
+    "title": "get_WarehouseOrder_for_sap_self",
+    "description": "Retrieve a single entity by its key from the WarehouseOrder collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_warehouseorder_for_sap_self",
+    "title": "count_WarehouseOrder_for_sap_self",
+    "description": "Get the total count of entities in the WarehouseOrder collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_warehousetask_for_sap_self",
+    "title": "list_WarehouseTask_for_sap_self",
+    "description": "Retrieve a list of entities from the WarehouseTask collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_warehousetask_for_sap_self",
+    "title": "create_WarehouseTask_for_sap_self",
+    "description": "Create a new instance of the WarehouseTask EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseTask",
+            "newParameterName": "warehousetask"
+          },
+          {
+            "name": "WarehouseTaskItem",
+            "newParameterName": "warehousetaskitem"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          },
+          {
+            "name": "WarehouseTaskStatus",
+            "newParameterName": "warehousetaskstatus"
+          },
+          {
+            "name": "WarehouseProcessType",
+            "newParameterName": "warehouseprocesstype"
+          },
+          {
+            "name": "WarehouseProcessCategory",
+            "newParameterName": "warehouseprocesscategory"
+          },
+          {
+            "name": "Product",
+            "newParameterName": "product"
+          },
+          {
+            "name": "Batch",
+            "newParameterName": "batch"
+          },
+          {
+            "name": "SourceStorageType",
+            "newParameterName": "sourcestoragetype"
+          },
+          {
+            "name": "DestinationStorageType",
+            "newParameterName": "destinationstoragetype"
+          },
+          {
+            "name": "DestinationStorageBin",
+            "newParameterName": "destinationstoragebin"
+          },
+          {
+            "name": "TargetQuantityInBaseUnit",
+            "newParameterName": "targetquantityinbaseunit"
+          },
+          {
+            "name": "BaseUnit",
+            "newParameterName": "baseunit"
+          },
+          {
+            "name": "EWMDelivery",
+            "newParameterName": "ewmdelivery"
+          },
+          {
+            "name": "PurchasingDocument",
+            "newParameterName": "purchasingdocument"
+          },
+          {
+            "name": "WhseTaskPlannedClosingDateTime",
+            "newParameterName": "whsetaskplannedclosingdatetime"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_warehousetask_for_sap_self",
+    "title": "update_WarehouseTask_for_sap_self",
+    "description": "Update an entity in WarehouseTask EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseTask",
+            "newParameterName": "warehousetask"
+          },
+          {
+            "name": "WarehouseTaskItem",
+            "newParameterName": "warehousetaskitem"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          },
+          {
+            "name": "WarehouseTaskStatus",
+            "newParameterName": "warehousetaskstatus"
+          },
+          {
+            "name": "WarehouseProcessType",
+            "newParameterName": "warehouseprocesstype"
+          },
+          {
+            "name": "WarehouseProcessCategory",
+            "newParameterName": "warehouseprocesscategory"
+          },
+          {
+            "name": "Product",
+            "newParameterName": "product"
+          },
+          {
+            "name": "Batch",
+            "newParameterName": "batch"
+          },
+          {
+            "name": "SourceStorageType",
+            "newParameterName": "sourcestoragetype"
+          },
+          {
+            "name": "DestinationStorageType",
+            "newParameterName": "destinationstoragetype"
+          },
+          {
+            "name": "DestinationStorageBin",
+            "newParameterName": "destinationstoragebin"
+          },
+          {
+            "name": "TargetQuantityInBaseUnit",
+            "newParameterName": "targetquantityinbaseunit"
+          },
+          {
+            "name": "BaseUnit",
+            "newParameterName": "baseunit"
+          },
+          {
+            "name": "EWMDelivery",
+            "newParameterName": "ewmdelivery"
+          },
+          {
+            "name": "PurchasingDocument",
+            "newParameterName": "purchasingdocument"
+          },
+          {
+            "name": "WhseTaskPlannedClosingDateTime",
+            "newParameterName": "whsetaskplannedclosingdatetime"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_warehousetask_for_sap_self",
+    "title": "delete_WarehouseTask_for_sap_self",
+    "description": "Delete an entity from WarehouseTask EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseTask",
+            "newParameterName": "warehousetask"
+          },
+          {
+            "name": "WarehouseTaskItem",
+            "newParameterName": "warehousetaskitem"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_warehousetask_for_sap_self",
+    "title": "get_WarehouseTask_for_sap_self",
+    "description": "Retrieve a single entity by its key from the WarehouseTask collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseTask",
+            "newParameterName": "warehousetask"
+          },
+          {
+            "name": "WarehouseTaskItem",
+            "newParameterName": "warehousetaskitem"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_warehousetask_for_sap_self",
+    "title": "count_WarehouseTask_for_sap_self",
+    "description": "Get the total count of entities in the WarehouseTask collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseTask",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list__warehousetask_in_warehouseorder_for_sap_self",
+    "title": "list__WarehouseTask_in_WarehouseOrder_for_sap_self",
+    "description": "Navigate from WarehouseOrder to related WarehouseTaskType entities via the '_WarehouseTask' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "navigationProperty": {
+          "name": "_WarehouseTask",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create__warehousetask_in_warehouseorder_for_sap_self",
+    "title": "create__WarehouseTask_in_WarehouseOrder_for_sap_self",
+    "description": "Create a new WarehouseTaskType entity via the '_WarehouseTask' navigation property of WarehouseOrder. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "navigationProperty": {
+          "name": "_WarehouseTask",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "EWMWarehouse",
+              "newParameterName": "ewmwarehouse_2"
+            },
+            {
+              "name": "WarehouseTask",
+              "newParameterName": "warehousetask"
+            },
+            {
+              "name": "WarehouseTaskItem",
+              "newParameterName": "warehousetaskitem"
+            },
+            {
+              "name": "WarehouseOrder",
+              "newParameterName": "warehouseorder_2"
+            },
+            {
+              "name": "WarehouseTaskStatus",
+              "newParameterName": "warehousetaskstatus"
+            },
+            {
+              "name": "WarehouseProcessType",
+              "newParameterName": "warehouseprocesstype"
+            },
+            {
+              "name": "WarehouseProcessCategory",
+              "newParameterName": "warehouseprocesscategory"
+            },
+            {
+              "name": "Product",
+              "newParameterName": "product"
+            },
+            {
+              "name": "Batch",
+              "newParameterName": "batch"
+            },
+            {
+              "name": "SourceStorageType",
+              "newParameterName": "sourcestoragetype"
+            },
+            {
+              "name": "DestinationStorageType",
+              "newParameterName": "destinationstoragetype"
+            },
+            {
+              "name": "DestinationStorageBin",
+              "newParameterName": "destinationstoragebin"
+            },
+            {
+              "name": "TargetQuantityInBaseUnit",
+              "newParameterName": "targetquantityinbaseunit"
+            },
+            {
+              "name": "BaseUnit",
+              "newParameterName": "baseunit"
+            },
+            {
+              "name": "EWMDelivery",
+              "newParameterName": "ewmdelivery"
+            },
+            {
+              "name": "PurchasingDocument",
+              "newParameterName": "purchasingdocument"
+            },
+            {
+              "name": "WhseTaskPlannedClosingDateTime",
+              "newParameterName": "whsetaskplannedclosingdatetime"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count__warehousetask_in_warehouseorder_for_sap_self",
+    "title": "count__WarehouseTask_in_WarehouseOrder_for_sap_self",
+    "description": "Count WarehouseTaskType entities accessible via the '_WarehouseTask' navigation property of WarehouseOrder in the sap_self service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "WarehouseOrder",
+        "navigationProperty": {
+          "name": "_WarehouseTask",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "EWMWarehouse",
+            "newParameterName": "ewmwarehouse"
+          },
+          {
+            "name": "WarehouseOrder",
+            "newParameterName": "warehouseorder"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  }
+]
